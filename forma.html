@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Formas</title>
+    <link href="css/stils.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <h1>Formas un ievadlauku piemērs</h1>
+    <form>
+        <p>Šodienas datums <input name="datums"></p>
+        <p>Ja gribi uzzināt šodienas datumu, spied pogu DATUMS 
+            <input onclick="datums.value=new Date();" name="poga" value="DATUMS" type="button">
+        </p>
+        <p>Ja gribi izdzēst datumua lodziņa saturu, spied pogu RESET
+            <input value="RESET" type="reset">
+        </p>
+    </form>
+    <form>
+        <div>1.skaitlis<input type="text" name="sk1"> </div>
+        <div>
+            <input value="X" name="reiz" onclick="rez.value=sk1.value*sk2.value" type="button">
+        </div>
+        <div>2.skaitlis<input type="text" name="sk2"> </div>
+        <hr>
+        <div>Rezultāts<input name="rez"> </div>
+    </form>
+	
+	<h1>saskaitisana un atnemsana</h1>
+	
+
+						
+		<table>
+<tr>
+<td> <input type="text" name="a" id="first" placeholder="pirmais skaitlis"> </td>
+</tr>
+<tr>
+<td> <input type="text" name="b" id="second" placeholder="otrais skaitlis"> </td>
+</tr>
+<tr>
+<td> <button onclick="add ( )">rekinat</button> </td>
+</tr>
+</table>
+<div id="add"></div>
+<div id="sub"></div>
+</body>
+
+<script type="text/javascript">
+function add( )
+{
+var a,b,Add,Sub;
+a = parseInt(document.getElementById ("first").value);
+b = parseInt(document.getElementById ("second").value);
+Add = a+b; //Add two numbers
+Sub = a-b; //Subtraction of two numbers
+//To print the result
+document.getElementById ("add") .innerHTML ="Addition : "+Add;
+document.getElementById ("sub").innerHTML ="Subtraction : "+Sub;
+}
+</script>
+
+
+<h1>dalisana</h1>
+    
+    <form>
+        pirmais skaitlis : <input type="text" id="firstNumber" /><br>
+        otrais skaitlis: <input type="text" id="secondNumber" /><br>
+        <input type="button" onClick="divideBy()" Value="Divide" />
+    </form>
+ 
+    <p>rezultats : <br>
+        <span id="result"></span>
+    </p>
+ 
+ 
+    <script>
+        function divideBy() {
+            num1 = document.getElementById(
+                "firstNumber").value;
+            num2 = document.getElementById(
+                "secondNumber").value;
+            document.getElementById(
+                "result").innerHTML = num1 / num2;
+        }
+    </script>
+
+
+	
+	
+	
+	
+	
+	
+	
+</body>
+</html>
